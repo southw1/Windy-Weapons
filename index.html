@@ -19,171 +19,94 @@
 
 <header>
 
-    <h1>WINDY CITY WEAPONS</h1>
+<h1>WINDY CITY WEAPONS</h1>
 
-    <p>GTA Weapon Randomizer</p>
+<p>GTA Weapon Spin</p>
 
 </header>
 
 
 
+<!-- CLEAR BUTTON -->
 
+<div class="top-bar">
 
-<div class="container">
+<button 
+class="clear-button"
+onclick="clearHistory()">
 
+CLEAR HISTORY
 
+</button>
 
-    <!-- LEFT SIDE -->
+</div>
 
-    <div class="tier-panel">
 
 
-        <h2>WEAPON TIERS</h2>
 
 
-        <button onclick="showTier('tier0')">
-            Tier 0
-        </button>
+<!-- MAIN 3 COLUMN AREA -->
 
+<div class="main-container">
 
-        <button onclick="showTier('tier1')">
-            Tier 1
-        </button>
 
 
-        <button onclick="showTier('tier15')">
-            Tier 1.5
-        </button>
 
 
-        <button onclick="showTier('tier2')">
-            Tier 2
-        </button>
+<!-- LEFT PANEL -->
 
+<div class="left-panel">
 
 
+<h2>RANDOMIZE</h2>
 
-        <h2>WEAPON POOL</h2>
 
+<button 
+class="randomize-button"
+onclick="openRandomizer()">
 
-        <ul id="weaponList">
+RANDOMIZE
 
-        </ul>
+</button>
 
 
-    </div>
 
 
+<div id="tierMenu" class="tier-menu">
 
 
+<h3>SELECT TIER</h3>
 
 
+<button onclick="selectTier('tier0')">
 
-    <!-- CENTER SPINNER -->
+Tier 0
 
+</button>
 
-    <div class="spinner-panel">
 
 
-        <h2>WEAPON SPIN</h2>
+<button onclick="selectTier('tier1')">
 
+Tier 1
 
+</button>
 
-        <div class="spinner-box">
 
 
-            <img
+<button onclick="selectTier('tier1.5')">
 
-            id="weaponImage"
+Tier 1.5
 
-            src=""
+</button>
 
-            alt="GTA Weapon">
 
 
-            <h1 id="weaponName">
+<button onclick="selectTier('tier2')">
 
-                READY
+Tier 2
 
-            </h1>
-
-
-        </div>
-
-
-
-
-
-        <button
-
-        class="spin-button"
-
-        onclick="randomizeWeapon()">
-
-            Spinn
-
-        </button>
-
-
-
-
-
-        <div id="weaponStats">
-
-            Choose a tier and spin.
-
-        </div>
-
-
-
-    </div>
-
-
-
-
-
-
-
-    <!-- RIGHT SIDE -->
-
-
-    <div class="info-panel">
-
-
-        <h2>CURRENT POOL</h2>
-
-
-        <div id="currentPool">
-
-            Select a tier.
-
-        </div>
-
-
-
-
-
-        <h2>ABOUT</h2>
-
-
-        <p>
-
-            Windy City Weapons is a GTA-style
-            weapon randomizer.
-
-            <br><br>
-
-            Select a tier and spin to receive
-            a random GTA weapon.
-
-        </p>
-
-
-
-    </div>
-
-
-
+</button>
 
 
 </div>
@@ -192,35 +115,16 @@
 
 
 
+<button
 
+class="gallery-button"
 
-<footer>
+onclick="openGallery()">
 
+VIEW WEAPONS
 
-    <h3>
-
-        WINDY CITY WEAPONS
-
-    </h3>
-
-
-    <p>
-
-        GTA Weapon Spin
-
-    </p>
-
-
-</footer>
+</button>
 
 
 
-
-
-
-<script src="script.js"></script>
-
-
-</body>
-
-</html>
+</div>
