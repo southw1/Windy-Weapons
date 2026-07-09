@@ -27,11 +27,13 @@
 
 
 
+
 <!-- CLEAR BUTTON -->
 
 <div class="top-bar">
 
 <button 
+id="clearButton"
 class="clear-button"
 onclick="clearHistory()">
 
@@ -45,7 +47,7 @@ CLEAR HISTORY
 
 
 
-<!-- MAIN 3 COLUMN AREA -->
+<!-- MAIN AREA -->
 
 <div class="main-container">
 
@@ -72,10 +74,12 @@ RANDOMIZE
 
 
 
+
 <div id="tierMenu" class="tier-menu">
 
 
 <h3>SELECT TIER</h3>
+
 
 
 <button onclick="selectTier('tier0')">
@@ -83,6 +87,7 @@ RANDOMIZE
 Tier 0
 
 </button>
+
 
 
 
@@ -94,11 +99,13 @@ Tier 1
 
 
 
-<button onclick="selectTier('tier1.5')">
+
+<button onclick="selectTier('tier15')">
 
 Tier 1.5
 
 </button>
+
 
 
 
@@ -109,13 +116,18 @@ Tier 2
 </button>
 
 
+
 </div>
 
 
 
 
 
+
+
 <button
+
+id="galleryButton"
 
 class="gallery-button"
 
@@ -127,11 +139,19 @@ VIEW WEAPONS
 
 
 
+
 </div>
 
 
 
+
+
+
+
+
+
 <!-- CENTER PANEL -->
+
 
 <div class="center-panel">
 
@@ -143,19 +163,20 @@ VIEW WEAPONS
 
 
 
-<!-- WEAPON DISPLAY -->
-
 
 <div class="spin-box">
 
 
+
 <img
 
-id="weaponImage"
 
-src=""
 
-alt="GTA Weapon">
+src="images/pistol.jpeg"
+
+alt="300">
+
+
 
 
 
@@ -167,6 +188,7 @@ READY
 
 
 
+
 </div>
 
 
@@ -175,14 +197,13 @@ READY
 
 
 
-<!-- SPIN BUTTON -->
-
-
 <button
+
+id="spinButton"
 
 class="spin-button"
 
-onclick="randomizeWeapon()">
+onclick="startSpin()">
 
 SPIN
 
@@ -192,8 +213,6 @@ SPIN
 
 
 
-
-<!-- DOWN ARROW -->
 
 
 <div class="spin-arrow">
@@ -208,14 +227,10 @@ SPIN
 
 
 
-<!-- WEAPON STATS -->
-
-
 <div id="weaponStats">
 
 
 Select a tier and spin.
-
 
 </div>
 
@@ -225,8 +240,6 @@ Select a tier and spin.
 
 
 
-
-<!-- SPIN HISTORY -->
 
 
 <div class="spin-history">
@@ -246,10 +259,20 @@ SPIN HISTORY
 <div id="spinHistory">
 
 
-
 No weapons spun yet.
 
 
+</div>
+
+
+
+
+</div>
+
+
+
+
+
 
 </div>
 
@@ -257,16 +280,12 @@ No weapons spun yet.
 
 
 
-</div>
 
-
-
-
-</div>
 
 
 
 <!-- RIGHT PANEL -->
+
 
 <div class="right-panel">
 
@@ -281,45 +300,23 @@ CURRENT POOL
 
 
 
+
 <div id="currentPool">
+
 
 Select a tier.
 
+
 </div>
 
-
-
-
-
-<h2>
-
-ABOUT
-
-</h2>
-
-
-
-
-<p>
-
-Windy City Weapons is a GTA-style
-weapon spin system.
-
-<br><br>
-
-Choose a tier, spin a weapon,
-and view your previous rolls.
-
-<br><br>
-
-All weapons use GTA images only.
-
-</p>
 
 
 
 
 </div>
+
+
+
 
 
 
@@ -334,17 +331,23 @@ All weapons use GTA images only.
 
 
 
-<!-- WEAPON GALLERY SCREEN -->
+
+
+<!-- GALLERY SCREEN -->
+
+
+<div
+
+id="galleryScreen"
+
+class="gallery-screen hidden">
 
 
 
-<div id="galleryScreen" class="gallery-screen hidden">
 
 
 
-
-
-<h1 id="galleryTitle">
+<h1>
 
 WEAPON GALLERY
 
@@ -354,11 +357,13 @@ WEAPON GALLERY
 
 
 
+
+
 <div id="weaponGallery">
 
 
-
 </div>
+
 
 
 
@@ -380,8 +385,8 @@ BACK
 
 
 
-</div>
 
+</div>
 
 
 
